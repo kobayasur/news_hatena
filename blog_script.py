@@ -112,7 +112,9 @@ def main():
         for article in articles[:3]:
             print(f"Processing article: {article['title']}")
             #prompt = f"この記事について感想を200字程度でまとめてください。記事のタイトル: {article['title']}\n記事のリンク: {article['link']}"
-            prompt = f"この記事について感想を200字程度でまとめてください。記事のタイトル: {article['title']}"
+            #prompt = f"この記事について感想を200字程度でまとめてください。記事のタイトル: {article['title']}"
+            prompt = f"以下の記事タイトルから受ける印象や感想を、前置きや断り書きの一切なしで、200字程度で自然な文章としてまとめてください。\n記事のタイトル: {article['title']}"
+
             impression = generate_gemini_response(prompt)
 
             if impression:
